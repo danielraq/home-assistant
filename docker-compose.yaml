@@ -1,0 +1,30 @@
+version: '2.0'
+
+services:
+  home-assistant:
+    privileged: true
+    build: ./build
+    container_name: home-assistant
+    depends_on:
+      -  mosquitto
+    volumes:
+      - ./ha_config:/config:rw
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "8123:8123"
+    network_mode: host
+    devices:
+      - "/dev/ttyAMA0:/dev/ttyAMA0"
+      - "/dev/mem:/dev/mem"
+    restart: always 
+
+  mosquitto:
+    image: fstehle/rpi-mosquitto
+    container_name: home-assistant-mqtt
+    volumes:
+      - ./mosquitto/config/:/mqtt/config:ro
+      - ./mosquitto/data:/mqtt/data/:rw
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    restart: always
