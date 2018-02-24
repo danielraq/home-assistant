@@ -1,0 +1,6 @@
+name: Czas dojazdu
+view: no
+icon: mdi:car
+entities:
+  - sensor.daniel__praca
+  - sensor.daniel__trening

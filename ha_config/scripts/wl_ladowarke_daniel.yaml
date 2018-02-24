@@ -1,0 +1,10 @@
+sequence:
+  - service: switch.turn_on
+    data:
+      entity_id:
+        - switch.ladowarka_syp_daniel
+  - wait_template: "{{ ( states.device_tracker.homeassistant_mi6.state == 'not_home'  or  states.sensor.bateria_tel_daniel.state|int > 98 ) }}"
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.ladowarka_syp_daniel

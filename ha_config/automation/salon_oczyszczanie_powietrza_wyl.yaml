@@ -1,0 +1,14 @@
+id: fan_salon_wyl
+alias: "Salon - Wyłącz oczyszczacz powietrza"
+initial_state: 'on'
+trigger:
+  - platform: numeric_state
+    entity_id:
+      - fan.xiaomi_air_purifier_2
+    value_template: '{{ state.attributes.aqi }}'
+    below: 45
+action:
+  - service: fan.turn_off
+    entity_id:
+      - fan.xiaomi_air_purifier_2
+

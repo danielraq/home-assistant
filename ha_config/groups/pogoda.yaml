@@ -1,0 +1,12 @@
+name: Pogoda
+entities:
+  - sun.sun
+  - sensor.pogoda_condition
+  - sensor.pogoda_temperature
+  - sensor.waqi_puaskiego_piastow_mazowieckie_poland
+  - sensor.pogoda_temperature_min
+  - sensor.pogoda_temperature_max
+  - sensor.pogoda_pressure 
+  - sensor.pogoda_humidity
+  - sensor.pogoda_wind_speed
+  - sensor.pogoda_visibility

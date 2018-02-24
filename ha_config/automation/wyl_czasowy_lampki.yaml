@@ -1,0 +1,15 @@
+id: switch_salon_lampka
+alias: "Wylacznik czasowy - lampki nocne"
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id:
+    - switch.lampka_nocna__salon
+    - switch.lampka_nocna__sylwia
+    - switch.lampka_syp_daniel
+  to: 'on'
+action:
+    - delay: '{{ states.input_number.czas_wl_lampka_nocna.state | int }}:00'
+    - service: switch.turn_off
+      data_template:
+        entity_id: " {{ trigger.entity_id }} "

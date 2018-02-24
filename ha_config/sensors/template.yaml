@@ -1,0 +1,16 @@
+- platform: template
+  sensors:
+    bateria_tel_daniel:
+      value_template: "{{ states.device_tracker.homeassistant_mi6.attributes.battery }}"
+      friendly_name: 'Mi6 - stan baterii'
+      unit_of_measurement: '%'
+      icon_template: >
+          {% set battery_level = states.sensor.battery_iphone.state|default(0)|int %}
+          {% set battery_round = (battery_level / 10) |int * 10 %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}

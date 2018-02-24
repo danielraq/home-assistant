@@ -1,0 +1,6 @@
+- platform: waqi
+  token: !secret waqi_token 
+  locations:
+    - mazowieckie
+  stations:
+    - Pułaskiego, Piastów, Mazowieckie, Poland

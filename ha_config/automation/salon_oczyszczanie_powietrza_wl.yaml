@@ -1,0 +1,32 @@
+id: fan_salon_wl
+alias: "Salon - Włącz oczyszczacz powietrza"
+initial_state: 'on'
+trigger:
+  - platform: numeric_state 
+    entity_id:
+      - sensor.waqi_puaskiego_piastow_mazowieckie_poland
+    value_template: '{{ state.attributes.pm_2_5 }}'
+    above: 150
+  - platform: numeric_state
+    entity_id:
+      - fan.xiaomi_air_purifier_2
+    value_template: '{{ state.attributes.aqi }}'
+    above: 50
+condition: 
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: fan.xiaomi_air_purifier_2
+      state: 'off'
+    - condition: time
+      after: '07:00:00'
+      before: '23:00:00'
+    - condition: state
+      entity_id: group.domownicy
+      state: 'home'
+action:
+  - service: fan.set_speed
+    data: 
+      entity_id:
+        - fan.xiaomi_air_purifier_2
+      speed: 'Silent'

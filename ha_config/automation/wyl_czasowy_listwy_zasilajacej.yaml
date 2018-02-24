@@ -1,0 +1,13 @@
+id: switch_salon_lampka
+alias: "Wylacznik czasowy - listwy zasilające"
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id:
+    - switch.listwa_zas_syp_daniel
+  to: 'on'
+action:
+    - delay: '{{ states.input_number.czas_wl_listwa.state | int }}:00'
+    - service: switch.turn_off
+      data_template:
+        entity_id: " {{ trigger.entity_id }} "

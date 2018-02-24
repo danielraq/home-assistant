@@ -1,0 +1,11 @@
+- platform: yweather
+  name: Pogoda
+  monitored_conditions:
+    - weather
+    - temp_min
+    - temp_max
+    - wind_speed
+    - pressure
+    - visibility
+    - humidity
+    - temperature

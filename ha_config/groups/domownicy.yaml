@@ -1,0 +1,4 @@
+name: Domownicy
+entities:
+  - device_tracker.homeassistant_mi6
+  - device_tracker.iphonesylwia

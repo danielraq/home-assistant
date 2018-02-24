@@ -1,0 +1,4 @@
+  - platform: xiaomi_miio
+    name: Xiaomi Air Purifier 2
+    host: 192.168.1.44
+    token: b8ce0ee843c5e242b48cacc225651d33

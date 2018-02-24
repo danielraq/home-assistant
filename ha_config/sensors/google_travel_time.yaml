@@ -1,0 +1,17 @@
+- platform: google_travel_time
+  name: Daniel - praca
+  icon: mdi:car
+  api_key: !secret google_travel_api
+  origin: !secret lokalizacja_dom
+  destination: !secret lokalizacja_daniel_praca
+  options:
+    mode: driving
+
+- platform: google_travel_time
+  name: Daniel - trening
+  icon: mdi:car
+  api_key: !secret google_travel_api
+  origin: !secret lokalizacja_dom
+  destination: !secret lokalizacja_daniel_trening
+  options:
+    mode: driving

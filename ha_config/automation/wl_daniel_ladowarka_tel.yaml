@@ -1,0 +1,14 @@
+id: switch_tel_daniel_lad
+alias: "Automatyczne wł/wył ładowaki telefonu"
+initial_state: 'on'
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.bateria_tel_daniel
+    below: 20
+condition:
+  - condition: state
+    entity_id: device_tracker.homeassistant_mi6
+    state: 'home'
+action:
+    - service: script.turn_on
+      entity_id: script.wl_ladowarke_daniel

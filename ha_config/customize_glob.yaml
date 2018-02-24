@@ -1,0 +1,9 @@
+  "switch.lampka*":
+    icon: mdi:lamp
+  "device_tracker.*":
+    hidden: true
+  "switch.listwa*":
+    icon: mdi:power-socket-eu
+  "switch.ladowarka*":
+    icon: mdi:power-plug
+ 

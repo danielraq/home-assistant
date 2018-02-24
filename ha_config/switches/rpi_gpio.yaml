@@ -1,0 +1,5 @@
+  platform: rpi_gpio
+  ports:
+    26: rpi_switch1
+    20: rpi_switch2
+    21: rpi_switch3

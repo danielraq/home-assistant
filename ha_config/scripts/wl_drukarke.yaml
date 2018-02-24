@@ -1,0 +1,11 @@
+sequence:
+  - service: switch.turn_on
+    data:
+      entity_id:
+        - switch.rpi_switch2
+  - delay: '00:10'
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.rpi_switch2
+

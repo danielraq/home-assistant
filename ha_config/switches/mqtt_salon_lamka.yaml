@@ -1,0 +1,9 @@
+  platform: mqtt
+  name: "Lampka nocna - Salon"
+  state_topic: "stat/lampkasalon/POWER"
+  command_topic: "cmnd/lampkasalon/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+

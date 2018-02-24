@@ -1,0 +1,4 @@
+name: Salon - Oczyszczanie powietrza
+entities:
+  - automation.salon__wyacz_oczyszczacz_powietrza
+  - automation.salon__wacz_oczyszczacz_powietrza

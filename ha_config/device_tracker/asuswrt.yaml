@@ -1,0 +1,7 @@
+  platform: asuswrt
+  hidden: true
+  host: router.asus.com
+  username: admin
+  ssh_key: /config/keys/id_rsa
+  track_new_devices: no
+  hide_if_away: yes

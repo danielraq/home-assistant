@@ -1,0 +1,35 @@
+  sun.sun:
+    friendly_name: Słońce
+  sensor.pogoda_temperature:
+    friendly_name: Temperatura 
+  sensor.pogoda_temperature_min:
+    friendly_name: Temperatura MIN
+  sensor.pogoda_temperature_max:
+    friendly_name: Temperatura MAX
+  sensor.pogoda_pressure:
+    friendly_name: Ciśnienie
+    icon: mdi:speedometer
+  sensor.pogoda_humidity:
+    friendly_name: Wilgotność
+    icon: mdi:water-percent
+  sensor.pogoda_wind_speed:
+    friendly_name: Prędkość wiatru
+    icon: mdi:weather-windy
+  sensor.pogoda_visibility:
+    friendly_name: Widoczność
+  sensor.pogoda_condition:
+    friendly_name: Pogoda
+  sensor.waqi_puaskiego_piastow_mazowieckie_poland:
+    friendly_name: Jakość powietrza
+  switch.rpi_switch2:
+    friendly_name: Drukarka
+    icon: mdi:printer
+  switch.rpi_switch3:
+    friendly_name: Kamera
+    icon: mdi:cctv
+  switch.ladowarka_syp_daniel:
+    friendly_name: Ładowarka - Sypialnia Daniel
+  switch.listwa_zas_syp_daniel:
+    friendly_name: Listwa zasilająca - Sypialnia Daniel
+  switch.lampka_syp_daniel:
+    friendly_name: Lampka nocna - Daniel

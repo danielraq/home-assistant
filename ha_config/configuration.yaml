@@ -1,0 +1,48 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 106
+  unit_system: metric
+  time_zone: Europe/Warsaw
+  customize_glob: !include customize_glob.yaml
+  customize: !include customize.yaml
+
+frontend:
+
+config:
+
+http:
+  api_password: !secret http_password
+
+mqtt:
+  broker: 192.168.1.129
+  username: !secret mqtt_user
+  password: !secret mqtt_password
+  discovery: true
+  discovery_prefix: homeassistant
+
+discovery:
+
+conversation:
+
+history:
+
+logbook:
+
+map:
+
+sun:
+
+tts:
+  - platform: google
+    language: 'pl'
+
+device_tracker: !include_dir_list device_tracker
+input_number: !include_dir_named input_number
+fan: !include fan.yaml
+sensor: !include_dir_merge_list sensors
+group: !include_dir_named groups
+script: !include_dir_named scripts
+switch: !include_dir_list switches
+automation: !include_dir_list automation
