@@ -33,3 +33,7 @@
     friendly_name: Listwa zasilająca - Sypialnia Daniel
   switch.lampka_syp_daniel:
     friendly_name: Lampka nocna - Daniel
+  sensor.dht_sensor_humidity:
+    friendly_name: Wilgotność - Salon
+  sensor.dht_sensor_temperature:
+    friendly_name: Temperatura - Salon
