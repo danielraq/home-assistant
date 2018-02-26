@@ -37,3 +37,5 @@
     friendly_name: Wilgotność - Salon
   sensor.dht_sensor_temperature:
     friendly_name: Temperatura - Salon
+  sensor.lux_przedpokoj:
+    friendly_name: Natężenie światła - Przedpokój
