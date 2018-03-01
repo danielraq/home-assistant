@@ -1,0 +1,13 @@
+sequence:
+  - condition: state
+    entity_id: switch.osmc_salon
+    state: 'on'
+  - service: media_player.turn_off
+    data:
+      entity_id:
+        - media_player.kodi
+  - delay: '00:05'
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.osmc_salon

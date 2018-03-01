@@ -39,3 +39,10 @@
     friendly_name: Temperatura - Salon
   sensor.lux_przedpokoj:
     friendly_name: Natężenie światła - Przedpokój
+  sensor.hp_laserjet_1300:
+    friendly_name: Drukarka
+    icon: mdi:printer
+  switch.tv_salon:
+    friendly_name: Telewizor - Salon
+  switch.osmc_salon:
+    friendly_name: OSMC - Salon

@@ -6,4 +6,7 @@
     icon: mdi:power-socket-eu
   "switch.ladowarka*":
     icon: mdi:power-plug
- 
+  "switch.tv*":
+    icon: mdi:television
+  "switch.osmc*":
+    icon: mdi:kodi

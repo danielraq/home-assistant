@@ -1,0 +1,15 @@
+id: switch_salon_osmc
+alias: "Włącz zasilanie - OSMC"
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id:
+    - sensor.ir_salon
+  to: !secret ir_kod_osmc
+condition: 
+ - condition: state
+   entity_id: switch.osmc_salon
+   state: 'off'
+action:
+    - service: switch.turn_on
+      entity_id: switch.osmc_salon

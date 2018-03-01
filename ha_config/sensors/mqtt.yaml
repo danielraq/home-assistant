@@ -1,0 +1,5 @@
+- platform: mqtt
+  state_topic: 'tele/tv_salon/RESULT'
+  name: 'ir_salon'
+  expire_after: 10
+  value_template: '{{ value_json["IrReceived"]["DATA"] }}'
